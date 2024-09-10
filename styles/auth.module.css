@@ -1,0 +1,36 @@
+@keyframes fade-up {
+  0%{
+    opacity: 0;
+    transform: translate(30px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0px) scale(1);
+  }
+}
+.hr-container {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .hr-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid gray;
+    transform: translateY(-50%);
+  }
+  
+  .hr-container span {
+    position: relative;
+    background: #fff;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  
+  .fadeUp{
+    animation: "fade-up 0.5s";
+  }
